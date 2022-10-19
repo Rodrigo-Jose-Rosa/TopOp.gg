@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Runas e Build</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <style>
+            *{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+            body{
+                background-color: #181A20;
+            }
+            #runaDarius,#DariusPadrao,#runaJax,#JaxPadrao,#runaAmumu,#AmumuPadrao,#runaRammus,#RammusPadrao,#runaYasuo,#YasuoPadrao,#runaZed,#ZedPadrao,#runaCait,#CaitPadrao,#runaJinx,#JinxPadrao,#runaNaut,#NautPadrao,#runaAlistar,#AlistarPadrao{
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="runaDarius">
+            <center>
+                <img src="Imagens/Darius vs JaxC.png" alt=""/>
+            </center>
+        </div>
+        <div id="DariusPadrao">
+            <center>
+                <img src="Imagens/Darius Padrão.png" alt=""/>
+            </center>
+        </div>     
+        <div id="runaJax">
+            <center>
+                <img src="Imagens/jax vs darius.png" alt=""/>
+            </center>
+        </div>
+        <div id="JaxPadrao">
+            <center>
+                <img src="Imagens/Jax Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaRammus">
+            <center>
+                <img src="Imagens/rammus vs amumu.png" alt=""/>
+            </center>
+        </div>
+        <div id="RammusPadrao">
+            <center>
+                <img src="Imagens/Rammus Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaAmumu">
+            <center>
+                <img src="Imagens/Amumu vs Rammus.png" alt=""/>
+            </center>
+        </div>
+        <div id="AmumuPadrao">
+            <center>
+                <img src="Imagens/Amumu Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaYasuo">
+            <img src="Imagens/Yasuo x Zed.png" alt=""/>
+        </div>
+        <div id="YasuoPadrao">
+            <center>
+                <img src="Imagens/Yasuo Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaZed">
+            <img src="Imagens/Zed x Yasuo.png" alt=""/>
+        </div>
+        <div id="ZedPadrao">
+            <center>
+                <img src="Imagens/Zed Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaCait">
+            <img src="Imagens/Cait x Jinx.png" alt=""/>
+        </div>
+        <div id="CaitPadrao">
+            <center>
+                <img src="Imagens/Cait Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaJinx">
+            <img src="Imagens/Jinx x Cait.png" alt=""/>
+        </div>
+        <div id="JinxPadrao">
+            <center>
+                <img src="Imagens/Jinx Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaNaut">
+            <img src="Imagens/Naut x Alistar.png" alt=""/>
+        </div>
+        <div id="NautPadrao">
+            <center>
+                <img src="Imagens/Naut Padrão.png" alt=""/>
+            </center>
+        </div>
+        <div id="runaAlistar">
+            <img src="Imagens/Alistar x Naut.png" alt=""/>
+        </div>
+        <div id="AlistarPadrao">
+            <center>
+                <img src="Imagens/Alistar Padrão.png" alt=""/>
+            </center>
+        </div>
+    <center>
+        <br>
+        <br>
+        <h2>Voltar a página inicial</h2>
+        <br>
+        <br>
+        <a href="index.html">Clique aqui para voltar a página inicial</a>
+    </center>
+    <script>
+        //Todas as imagens feitas pelo Adilson
+        //Inicio Rodrigo
+        alert('Bem vindo ao TopOp.gg\nNesse aplicativo, nós iremos ajudar você jogador de League of Legends com suas runas e seus itens contra o personagem que você quer jogar contra de acordo com o seu personagem');
+        var nick = prompt('Qual seu NickName?');
+
+        do {
+            var rota = parseInt(prompt('Qual rota você vai jogar?\n1 - Topo\n2 - Selva\n3 - Meio\n4 - Atirador\n5 - Suporte'));
+        } while (rota < 1 || rota > 5)
+        do {
+            if (rota === 1) {
+                var camp = parseInt(prompt('Qual campeão você vai jogar?\n1 - Darius\n2 - Jax'));
+                if (camp === 1) {
+                    var inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Jax'));
+                    if (inimigo === 0) {
+                        document.getElementById("DariusPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaDarius").style.display = "block";
+                    }
+                } else if (camp === 2) {
+                    var inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Darius'));
+                    if (inimigo === 0) {
+                        document.getElementById("JaxPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaJax").style.display = "block";
+                    }
+                }
+
+
+            } else if (rota === 2) {
+                camp = parseInt(prompt('Qual campeão você vai jogar?\n1 - Rammus\n2 - Amumu'));
+                if (camp === 1) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Amumu'));
+                    if (inimigo === 0) {
+                        document.getElementById("RammusPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaRammus").style.display = "block";
+                    }
+                } else if (camp === 2) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Rammus'));
+                    if (inimigo === 0) {
+                        document.getElementById("AmumuPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaAmumu").style.display = "block";
+                    }
+                }
+
+
+            } else if (rota === 3) {
+                camp = parseInt(prompt('Qual campeão você vai jogar?\n1 - Yasuo\n2 - Zed'));
+                if (camp === 1) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Zed'));
+                    if (inimigo === 0) {
+                        document.getElementById("YasuoPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaYasuo").style.display = "block";
+                    }
+                } else if (camp === 2) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar?\n0 - Runa Padrão\n1 - Yasuo'));
+                    if (inimigo === 0) {
+                        document.getElementById("ZedPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaZed").style.display = "block";
+                    }
+                }
+
+
+            } else if (rota === 4) {
+                camp = parseInt(prompt('Qual campeão você vai jogar?\n1 - Caitlyn\n2 - Jinx'));
+                if (camp === 1) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Jinx'));
+                    if (inimigo === 0) {
+                        document.getElementById("CaitPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaCait").style.display = "block";
+                    }
+                } else if (camp === 2) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Caitlyn'));
+                    if (inimigo === 0) {
+                        document.getElementById("JinxPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaJinx").style.display = "block";
+                    }
+                }
+
+
+            } else if (rota === 5) {
+                camp = parseInt(prompt('Qual campeão você vai jogar?\n1 - Nautilus\n2 - Alistar'));
+                if (camp === 1) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Alistar'));
+                    if (inimigo === 0) {
+                        document.getElementById("NautPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaNaut").style.display = "block";
+                    }
+                } else if (camp === 2) {
+                    inimigo = parseInt(prompt('Qual campeão você vai jogar contra?\n0 - Runa Padrão\n1 - Nautilus'));
+                    if (inimigo === 0) {
+                        document.getElementById("AlistarPadrao").style.display = "block";
+                    } else if (inimigo === 1) {
+                        document.getElementById("runaAlistar").style.display = "block";
+                    }
+                }
+            }
+
+            var sair = confirm('Deseja ver as runas e itens?');
+        } while (sair !== true);
+        //Término Rodrigo
+    </script>
+</body>
+</html>

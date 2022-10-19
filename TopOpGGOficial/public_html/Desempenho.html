@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Desempenho</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+        <style>
+            body{
+                background-color: #C3235B;
+                text-align: center;
+                color: white;
+                font-size: 37.5px
+            }
+        </style>
+    </head>
+    <body>
+    <center>
+        <h2>Voltar a página inicial</h2>
+        <a href="index.html">Clique aqui para voltar a página inicial</a>
+    </center>
+    <script>
+        //inicio Adilson
+        alert('Bem vindo a parte de desempenho das suas partidas ranquedas!\n\nAqui você coloca quantas vitórias e derrotas e ele irá calcular sua porcentagem de vitória e pontos de liga obtidos.');
+        var vitorias = parseInt(prompt('Quantas vitórias ?'));
+        var derrotas = parseInt(prompt('Quantas derrotas ?'));
+        o = vitorias + derrotas;
+        var cont = 1;
+        var somapdl = 0;
+        for (var i = 0; i < o; i++) {
+            var pdl = parseInt(prompt('Quantos pdl foram obtido na ' + cont + 'ª partida?'));
+            cont++;
+            somapdl = pdl + somapdl;
+        }
+        if (somapdl > 0) {
+            document.write('<br>Foram obtidos ' + somapdl + ' PDLs<br>');
+        } else if (somapdl < 0) {
+            document.write('<br>Foram perdidos ' + somapdl + ' PDLs<br>');
+        } else {
+            document.write('<br>Você não obteve nenhum PDL.<br>');
+        }
+        porcVit = (vitorias / o) * 100;
+        document.write('<br>Sua porcentagem de vitórias é de: ' + porcVit.toFixed(2) + '%');
+        //término Adilson
+    </script>
+</body>
+</html>
